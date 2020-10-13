@@ -8,6 +8,8 @@ app.use((req, res, next) => {
     next();
 })
 
+app.use('/uploads', express.static('uploads'))
+
 app.get("/api/posts", (req, res) => {
     res.status(200).send(postData.get());
 });

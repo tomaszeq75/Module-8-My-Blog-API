@@ -10,10 +10,12 @@ app.use((req, res, next) => {
 
 app.use('/uploads', express.static('uploads'))
 
+// get all posts
 app.get("/api/posts", (req, res) => {
     res.status(200).send(postData.get());
 });
 
+// get individual post
 app.get("/api/posts/:post_id", (req, res) => {
     const postId = req.params.post_id;
     const foundPost = postData.getIndividualBlog(postId)

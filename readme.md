@@ -20,6 +20,12 @@ Open Terminal
 Create `app.js` file    
 
 
+## uruchomienie API
+>>  cd Module-8-My-Blog-API\exercise
+>>  nodemon app.js
+
+
+
 
 
 

@@ -34,9 +34,11 @@ app.post("/api/posts", upload.single('post_image'), (req, res) => {
         "title": req.body.title,
         "content": req.body.content,
         "post_image": req.file,
+        // "post_image": req.body.post_image,
         "added_date": `${Date.now()}`
     }
     console.log(req.body);
+    console.log(req.file);
     res.status(201).send(newPost);
 })
 
